@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morphing Animation Example</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1, p, ol li {
+            transition: all 1s ease;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        ol li {
+            font-size: 1em;
+            color: #999;
+        }
+
+        /* Keyframes for morphing animation */
+        @keyframes morphH1 {
+            0% {
+                font-size: 2em;
+                color: #333;
+            }
+            50% {
+                font-size: 3em;
+                color: #e74c3c;
+            }
+            100% {
+                font-size: 2em;
+                color: #333;
+            }
+        }
+
+        @keyframes morphP {
+            0% {
+                font-size: 1.2em;
+                color: #666;
+            }
+            50% {
+                font-size: 1.5em;
+                color: #3498db;
+            }
+            100% {
+                font-size: 1.2em;
+                color: #666;
+            }
+        }
+
+        @keyframes morphOlLi {
+            0% {
+                font-size: 1em;
+                color: #999;
+            }
+            50% {
+                font-size: 1.2em;
+                color: #2ecc71;
+            }
+            100% {
+                font-size: 1em;
+                color: #999;
+            }
+        }
+
+        /* Apply animation */
+        h1 {
+            animation: morphH1 3s infinite;
+        }
+
+        p {
+            animation: morphP 4s infinite;
+        }
+
+        ol li {
+            animation: morphOlLi 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Morphing Header</h1>
+    <p>This is a morphing paragraph.</p>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+</body>
+</html>
